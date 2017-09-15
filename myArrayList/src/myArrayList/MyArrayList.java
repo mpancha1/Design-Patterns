@@ -40,7 +40,7 @@ if((Integer.parseInt(line) > 0) && (Integer.parseInt(line) < 10000)){
 	
 
 
-/*------------------------------------- Method to ReSIZE the Array -------------------------------------------------------------*/
+/**------------------------------------- Method to ReSIZE the Array returning nothing-------------------------------------------------------------*/
 	private void reSizeArray(int input[]){
 		int Array_Fill_new[];
 		
@@ -75,7 +75,7 @@ if((Integer.parseInt(line) > 0) && (Integer.parseInt(line) < 10000)){
 	}
 
 
-	/*------------------------------------- Method to Insert in to the Array -------------------------------------------------------------*/
+	/**------------------------------------- Method to Insert in to the Array returning nothing-------------------------------------------------------------*/
 
 	public void insertSorted(int value) {
          
@@ -97,7 +97,7 @@ if((Integer.parseInt(line) > 0) && (Integer.parseInt(line) < 10000)){
 		}
 	}
 
-	/*------------------------------------- Method to Return the index of the the MyArrayList Element -------------------------------------------------------------*/
+	/**------------------------------------- Method to Return the index of the the MyArrayList Element if found return index else return -1  -------------------------------------------------------------*/
 
 	public int indexOf(int value) {
 
@@ -118,7 +118,7 @@ if((Integer.parseInt(line) > 0) && (Integer.parseInt(line) < 10000)){
 
 	}
 
-	/*------------------------------------- Method to get the size of MyArrayList -------------------------------------------------------------*/
+	/**------------------------------------- Method to get the size of MyArrayList returning int -------------------------------------------------------------*/
 
 	public int size() {
 
@@ -126,7 +126,7 @@ if((Integer.parseInt(line) > 0) && (Integer.parseInt(line) < 10000)){
 
 	}
 
-	/*------------------------------------- Method to return sum of Elements of MyArray -------------------------------------------------------------*/
+	/**------------------------------------- Method to return sum of Elements of MyArray returnng sum int -------------------------------------------------------------*/
 
 	public int sum() {
 
