@@ -1,4 +1,5 @@
 package myArrayList;
+import myArrayList.util.FileProcessor;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -98,7 +99,7 @@ public class MyArrayList {
 		track_insert++;
 		
 		Arrays.sort(Array_Fill, 0, track_insert);
-		System.out.println(track_insert);
+		//System.out.println(track_insert);
 		}
 		else{
 			System.out.println("$--");
@@ -153,7 +154,7 @@ public class MyArrayList {
 		for (i = 0; i < Array_Fill.length; i++) {
 
 			if (Array_Fill[i] == value) {
-				System.out.println("----" + Array_Fill[i]);
+				//System.out.println("----" + Array_Fill[i]);
 				for (int j = i; j < Array_Fill.length - 1; j++) {
 
 					Array_Fill[j] = Array_Fill[j + 1];

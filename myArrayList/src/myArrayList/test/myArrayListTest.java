@@ -1,4 +1,8 @@
-package myArrayList;
+package myArrayList.test;
+import myArrayList.MyArrayList;
+import myArrayList.util.Results;
+
+import java.util.Iterator;
 
 public class MyArrayListTest {
 
@@ -8,6 +12,8 @@ public class MyArrayListTest {
 		
 		
 		print_sum(myArrayList, results);
+		
+		results.writeToFile("\n");
 		
 		test_resize(myArrayList, results);
 		
@@ -26,6 +32,8 @@ public class MyArrayListTest {
 		test_sum(myArrayList, results);
 		
 		test_remove_all_occurence(myArrayList, results);
+		
+		test_check_boundry(myArrayList, results);
 		
 	}
 	
@@ -230,6 +238,28 @@ if((after_sum - before_sum == -10)){
 			results.storeNewResult("Test of Finding index of non present value Failed...not returning -1");
 			
 		}
+		
+		
+	}
+	
+	void test_check_boundry(MyArrayList myArrayList, Results results){
+		
+		int size = myArrayList.size();
+		for (int i = 0; i < 1000; i++) {
+			
+			myArrayList.insertSorted(i);
+		}
+		
+		int size_after = myArrayList.size();
+		if(size + 1000 == size_after){
+			
+			results.storeNewResult("Test of Checking Boundry is Passed... Added Maximum number of values");
+		}else{
+			
+			
+			results.storeNewResult("Test of Checking Boundry Failed!!! ---> Can not store too many values");
+		}
+		
 		
 		
 	}

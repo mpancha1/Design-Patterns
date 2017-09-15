@@ -1,4 +1,5 @@
-package myArrayList;
+package myArrayList.util;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -29,6 +30,7 @@ public class Results implements StdoutDisplayInterface,FileDisplayInterface {
 			bw.write("");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
+			System.err.println("Exception Can not Create File or Can not write in ti file!! ");
 			e.printStackTrace();
 		}
 		
@@ -75,8 +77,11 @@ public class Results implements StdoutDisplayInterface,FileDisplayInterface {
 				bw.newLine();
 				//bw.close();
 			} catch (IOException e) {
+				
 				// TODO Auto-generated catch block
+				System.err.println("Can not Write in to file");
 				e.printStackTrace();
+				
 			}try {
 				finalize();
 			} catch (Throwable e) {

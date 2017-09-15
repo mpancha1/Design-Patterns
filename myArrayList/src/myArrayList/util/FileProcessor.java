@@ -1,10 +1,10 @@
-package myArrayList;
-import java.awt.List;
+package myArrayList.util;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
+
 
 public class FileProcessor {
 
@@ -17,6 +17,7 @@ public class FileProcessor {
 			br = new BufferedReader(in);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
+			System.err.println("File not Found!!!");
 			e.printStackTrace();
 		} 
 			
@@ -31,6 +32,7 @@ public class FileProcessor {
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
+			System.err.println("Exception in reading line from File!!!");
 			e.printStackTrace();
 		}
 		
