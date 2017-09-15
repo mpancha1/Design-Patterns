@@ -36,8 +36,10 @@ public class MyArrayListTest {
 		test_check_boundry(myArrayList, results);
 		
 	}
-	
+	 /**Testing Successfull Insertion returning nothing*/
+
 	void test_insertSorted(MyArrayList myArrayList, Results results){
+		
 		
 		int before_sum = myArrayList.sum();
 		myArrayList.insertSorted(10);
@@ -60,7 +62,10 @@ public class MyArrayListTest {
 		
 	}
 
+	 /**Testing Successfull remvoveSorted returning nothing*/
+
 	void test_removeSorted(MyArrayList myArrayList, Results results){
+		
 		
 		
 		int before_sum = myArrayList.sum();
@@ -78,7 +83,9 @@ if((after_sum - before_sum == -10)){
 		}
 	}
 		
-		
+		 /**Testing Successfull Size Method returning nothing*/
+ 
+
 		void test_size(MyArrayList myArrayList, Results results){
 			
 			int size_before = myArrayList.size();
@@ -107,6 +114,8 @@ if((after_sum - before_sum == -10)){
 		  
 	  }
 	
+ /**Testing Successfull indexOf Method  returning nothing*/
+
 	  void test_index_of(MyArrayList myArrayList, Results results){
 		  
 		  
@@ -132,7 +141,8 @@ if((after_sum - before_sum == -10)){
 		  
 		  
 	  }
-	
+	 /**Testing Successfull Array resize Method, Boundry Condition everytime increase size of array when input size is larger returning nothing*/
+
 	void test_resize(MyArrayList myArrayList, Results results){
 		
 		
@@ -163,6 +173,8 @@ if((after_sum - before_sum == -10)){
 		
 	}
 	
+	 /**Testing Successfull sum method returning nothing*/
+
 	void test_sum(MyArrayList myArrayList, Results results){
 		
 		
@@ -181,6 +193,8 @@ if((after_sum - before_sum == -10)){
 		}
 	}
 	
+	 /**Testing Successfull removeSorted Method for all the occurence of that element returning nothing*/
+
 	void test_remove_all_occurence(MyArrayList myArrayList, Results results){
 		
 		
@@ -200,6 +214,8 @@ if((after_sum - before_sum == -10)){
 		}
 	}
 	
+	 /**Testing Successfull Insertion for duplicate values returning nothing*/
+
 	void test_duplicate_value_addition(MyArrayList myArrayList,Results results){
 		
 		myArrayList.insertSorted(55);
@@ -221,6 +237,8 @@ if((after_sum - before_sum == -10)){
 		
 	}
 	
+	 /**Testing Successfull indexOf Method if element not found returning -1 or not test method returning nothing*/
+
 	void test_index_not_found(MyArrayList myArrayList, Results results){
 		
 		myArrayList.insertSorted(11);
@@ -242,6 +260,8 @@ if((after_sum - before_sum == -10)){
 		
 	}
 	
+	 /**Testing Boundry Check Added 1000 values and structure stores it successfully returning nothing*/
+
 	void test_check_boundry(MyArrayList myArrayList, Results results){
 		
 		int size = myArrayList.size();

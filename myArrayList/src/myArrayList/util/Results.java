@@ -13,7 +13,7 @@ public class Results implements StdoutDisplayInterface,FileDisplayInterface {
 	BufferedWriter bw;
 	@Override
 	public void writeToStdout(String s) {
-		// TODO Auto-generated method stub
+		
 		System.out.println(s+"\n");
 	}
 	
@@ -22,14 +22,14 @@ public class Results implements StdoutDisplayInterface,FileDisplayInterface {
 		results = new String[11];
 		file_path = file_path_C;
 		File file = new File(file_path);
-		//file.createNewFile();
+		
 		
 		try {
 			file.createNewFile();
 			bw = new BufferedWriter(new FileWriter(file_path));
 			bw.write("");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			System.err.println("Exception Can not Create File or Can not write in ti file!! ");
 			e.printStackTrace();
 		}
@@ -51,23 +51,23 @@ public class Results implements StdoutDisplayInterface,FileDisplayInterface {
 	}
 	@Override
 	protected void finalize() throws Throwable {
-		// TODO Auto-generated method stub
+		
 		bw.close();
 		super.finalize();
 	}
 
 	@Override
 	public void writeToFile(String s) {
-		// TODO Auto-generated method stub
 		
-		//File file = new File("C:\\Users\\MANAV\\Desktop\\Fall 2017\\DP\\Assignments\\Assignment_1\\output_assi1.txt");
+		
+		
 		
 		try {
 
 			
 			bw = new BufferedWriter(new FileWriter(file_path,true));
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
+			
 			e1.printStackTrace();
 		}
 			
@@ -75,10 +75,10 @@ public class Results implements StdoutDisplayInterface,FileDisplayInterface {
 				
 				bw.append(s);
 				bw.newLine();
-				//bw.close();
+				
 			} catch (IOException e) {
 				
-				// TODO Auto-generated catch block
+			
 				System.err.println("Can not Write in to file");
 				e.printStackTrace();
 				
