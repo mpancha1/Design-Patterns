@@ -1,3 +1,4 @@
+package myArrayList;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -9,7 +10,7 @@ public class MyArrayList {
 
 	private int Array_Fill[] = new int[initial_size];
 
-	public MyArrayList() {
+	public MyArrayList(String file_name) {
 
 		
 		
@@ -38,7 +39,7 @@ public class MyArrayList {
 
 		}*/
 		
-		FileProcessor fp = new FileProcessor("C:\\Users\\MANAV\\Desktop\\draft.txt");
+		FileProcessor fp = new FileProcessor(file_name);
 		String line;
 		int countinput  = 0;
 		while((line = fp.readLine())!= null){
@@ -169,27 +170,4 @@ public class MyArrayList {
 		return 0;
 	}
 	
-	public static void main(String[] args) {
-		
-		
-		
-	}
-	/*
-	 * public static void main(String[] args) {
-	 * 
-	 * int[] test_arr = new int[10];
-	 * 
-	 * MyArrayList m = new MyArrayList(test_arr);
-	 * 
-	 * m.insertSorted(7); m.insertSorted(5); m.insertSorted(5);
-	 * m.insertSorted(5); m.insertSorted(-1); m.insertSorted(0);
-	 * m.removeValue(5); System.out.println("Index of Searched Value : "+
-	 * m.indexOf(5)); System.out.println("\nSum of ArrayList : "+ m.sum());
-	 * m.insertSorted(10); System.out.println("\nSize of ArrayList : "+
-	 * m.size()); System.out.println("\nSum of ArrayList : "+ m.sum());
-	 * 
-	 * m.toString();
-	 * 
-	 * }
-	 */
 }

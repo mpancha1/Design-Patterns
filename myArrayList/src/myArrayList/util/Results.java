@@ -1,3 +1,4 @@
+package myArrayList;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -15,22 +16,28 @@ public class Results implements StdoutDisplayInterface,FileDisplayInterface {
 		System.out.println(s+"\n");
 	}
 	
-	public Results(){
+	public Results(String file_path_C){
 		
-		results = new String[10];
-		file_path = "C:\\Users\\MANAV\\Desktop\\Fall 2017\\DP\\Assignments\\Assignment_1\\output_assi1.txt";
+		results = new String[11];
+		file_path = file_path_C;
 		File file = new File(file_path);
+		//file.createNewFile();
 		
 		try {
 			file.createNewFile();
+			bw = new BufferedWriter(new FileWriter(file_path));
+			bw.write("");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		i = 0;
 		
 	}
 	
+	
+
 	public void storeNewResult(String s){
 		
 		
@@ -54,6 +61,8 @@ public class Results implements StdoutDisplayInterface,FileDisplayInterface {
 		//File file = new File("C:\\Users\\MANAV\\Desktop\\Fall 2017\\DP\\Assignments\\Assignment_1\\output_assi1.txt");
 		
 		try {
+
+			
 			bw = new BufferedWriter(new FileWriter(file_path,true));
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
@@ -83,13 +92,6 @@ public class Results implements StdoutDisplayInterface,FileDisplayInterface {
 		
 	}
 	
-public static void main(String[] args) {
-	
-	FileDisplayInterface f = new Results();
-	f.writeToFile("Hello");
-	f.writeToFile("hellooooo");
-	//f.writeToFile("Hello0\n");
-	
-}
+
 }
 
