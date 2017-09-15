@@ -2,7 +2,7 @@ package myArrayList.test;
 import myArrayList.MyArrayList;
 import myArrayList.util.Results;
 
-import java.util.Iterator;
+
 
 public class MyArrayListTest {
 
